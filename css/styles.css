@@ -78,6 +78,33 @@ div {
   margin-top: 3rem;
 }
 
+.margin-top-md {
+  margin-top: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: var(--tertiary-light);
+  border-radius: 6px;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 /*------------------------------------*\
   Components
@@ -118,3 +145,32 @@ div {
   color: var(--primary-light);
   margin-right: 0.4rem;
 }
+
+#task-input {
+  height: 2.5rem;
+  width: 25rem;
+  padding-left: .75rem;
+}
+
+.number-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-input button {
+  margin-right: 0.75rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 8px;
+  background: var(--secondary-light);
+}
+
+#pomo-number {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 0.75rem;
+  text-align: center;
+  background: var(--secondary-light);
+}
+
