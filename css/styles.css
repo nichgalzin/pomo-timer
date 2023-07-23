@@ -154,6 +154,11 @@ input[type=number] {
   padding-left: .75rem;
 }
 
+label {
+  color: var(--primary-light);
+  font-family: var(--paragraph-font);
+}
+
 .number-input {
   display: flex;
   justify-content: center;
