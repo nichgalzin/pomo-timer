@@ -148,7 +148,8 @@ input[type=number] {
 
 #task-input {
   height: 2.5rem;
-  width: 25rem;
+  width: 80vw;
+  max-width: 25rem;
   padding-left: .75rem;
 }
 
