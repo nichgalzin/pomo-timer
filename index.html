@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300" rel="stylesheet">
   <title>Pomo timer</title>
 </head>
 <body>
   <h1>Pomo Timer</h1>
   <main class="wrapper">
     <div id="timer">
-      <div id="time"></div>
-      <button>&#9654;</button>
+      <div id="time">25:00</div>
+      <button class="button" id="timer-btn">&#9654;</button>
+  
     </div>
-    <div class="timer-controls">
+    <div class="timer-controls margin-top-lg">
       <button>Pomo</button>
       <button>Short</button>
       <button>Long</button>
     </div>
-    <form>
+    <form class="margin-top-lg">
       <input type="text" name="task" id="task" placeholder="Set a task"/>
       <input type="number" name="pomo-number" id="pomo-number"/>
       <button>&#9650;</button>
