@@ -72,6 +72,7 @@ div {
   background: transparent;
   color: var(--primary-dark);
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .margin-top-lg {
@@ -85,6 +86,7 @@ div {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 input {
@@ -140,7 +142,6 @@ input[type=number] {
 .controls-btn {
   background: var(--secondary-dark);
   border: 2px solid var(--primary-dark);
-  border-radius: 8px;
   padding: 0.5rem 1.5rem;
   color: var(--primary-light);
   margin-right: 0.4rem;
@@ -163,7 +164,6 @@ input[type=number] {
   margin-right: 0.75rem;
   height: 1.75rem;
   width: 1.75rem;
-  border-radius: 8px;
   background: var(--secondary-light);
 }
 
@@ -175,3 +175,9 @@ input[type=number] {
   background: var(--secondary-light);
 }
 
+#submit {
+  background-color: var(--secondary-light);
+  width: 5rem;
+  padding: 0.4rem 0rem;
+  font-size: 1.5rem;
+}
