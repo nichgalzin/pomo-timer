@@ -136,7 +136,12 @@ input[type=number] {
 #timer-btn {
   font-size: 4rem;
   position: relative;
-  top: 4rem;
+  top: 6rem;
+}
+
+#timer-btn img {
+  width: 5rem;
+  height: 5rem;
 }
 
 .controls-btn {
