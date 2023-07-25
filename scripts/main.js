@@ -24,15 +24,21 @@ const stopTimer = () => {
   if (isTimerRunning) {
     clearInterval(timerInterval);
     isTimerRunning = false;
+    timerDuration = remainingTime();
+    // Handle play button and class name
     controlImg.src = "./resources/play.svg" 
     controlImg.className = 'play';
   }
 }
 
-const updateTimerDisplay = () => {
+const remainingTime = () => {
   const currentTime = Date.now();
-  const remainingTime = Math.max(endTime - currentTime, 0);
-  const formattedTime = formatTime(remainingTime);
+  return Math.max(endTime - currentTime, 0);
+}
+
+const updateTimerDisplay = () => {
+  const remaining = remainingTime();
+  const formattedTime = formatTime(remaining);
   document.getElementById('time').innerText = formattedTime;
 
   if (remainingTime === 0) {
