@@ -186,3 +186,24 @@ label {
   padding: 0.4rem 0rem;
   font-size: 1.5rem;
 }
+
+.break-back {
+  background-color: var(--secondary-light);
+  width: 8rem;
+  height: 3rem;
+  
+  padding: 0.4rem 0rem;
+  /* breaks increment buttons */
+  margin: 0rem 0rem 3rem 1rem;
+}
+
+.text-render {
+  text-align: center;
+  color: var(--primary-light);
+  margin: 3rem 0rem;
+  font-size: 1.5rem;
+}
+
+#up-btn, #down-btn {
+  margin: 0.4rem 0.5rem 0rem 0rem;
+}
