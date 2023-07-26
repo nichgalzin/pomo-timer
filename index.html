@@ -1,44 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300" rel="stylesheet">
-  <script src="scripts/main.js" type= "module" defer></script>
-  <title>Pomo timer</title>
-</head>
-<body>
-  <h1>Pomo Timer</h1>
-  <main class="wrapper margin-top-lg">
-    <div id="timer">
-      <div id="time">25:00</div>
-      <button class="button" id="timer-btn">
-        <img 
-          src="./resources/play.svg" 
-          alt="play button"
-          id="control-img"
-          class="play"
-          >
-      </button>
-  
-    </div>
-    <div class="timer-controls margin-top-lg">
-      <button class="controls-btn button">Pomo</button>
-      <button class="controls-btn button">Short</button>
-      <button class="controls-btn button">Long</button>
-    </div>
-    <form class="margin-top-lg">
-      <input type="text" name="task" id="task-input" placeholder="Set a task"/>
-      <label class="margin-top-md">Number of pomos</label>
-      <div class="number-input margin-top-md">
-        <input type="number" name="pomo-number" id="pomo-number"/>
-        <button class="button">&#9650;</button>
-        <button class="button">&#9660;</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300"
+      rel="stylesheet"
+    />
+    <script src="scripts/main.js" type="module" defer></script>
+    <title>Pomo timer</title>
+  </head>
+  <body>
+    <h1>Pomo Timer</h1>
+    <main class="wrapper margin-top-lg">
+      <div id="timer">
+        <div id="time">25:00</div>
+        <button class="button" id="timer-btn">
+          <img
+            src="./resources/play.svg"
+            alt="play button"
+            id="control-img"
+            class="play"
+          />
+        </button>
       </div>
-      <button type="submit" id="submit" class="margin-top-md button">&#43;</button>
-    </form>
-  </main>
-</body>
+      <div class="timer-controls margin-top-lg">
+        <button class="controls-btn button">Pomo</button>
+        <button class="controls-btn button">Short</button>
+        <button class="controls-btn button">Long</button>
+      </div>
+      <form class="margin-top-lg">
+        <input
+          type="text"
+          name="task"
+          id="task-input"
+          placeholder="Set a task"
+        />
+        <label class="margin-top-md">Number of pomos</label>
+        <div class="number-input margin-top-md">
+          <input type="number" name="pomo-number" id="pomo-number" />
+          <button class="button">&#9650;</button>
+          <button class="button">&#9660;</button>
+        </div>
+        <button type="submit" id="submit" class="margin-top-md button">
+          &#43;
+        </button>
+      </form>
+    </main>
+  </body>
 </html>
