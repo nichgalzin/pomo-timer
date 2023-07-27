@@ -27,16 +27,18 @@
       <button class="controls-btn button">Short</button>
       <button class="controls-btn button">Long</button>
     </div>
-    <form class="margin-top-lg" id="form">
-      <input type="text" name="task" id="task-input" placeholder="Set a task"/>
-      <label class="margin-top-md">Number of pomos</label>
-      <div class="number-input margin-top-md">
-        <input type="number" name="pomo-number" id="pomo-number" value="1"/>
-        <button class="button break-back" id="up-btn">&#9650;</button>
-        <button class="button break-back" id="down-btn">&#9660;</button>
-      </div>
-      <button type="submit" id="submit" class="margin-top-md button">&#43;</button>
-    </form>
+    <template id="form-template">
+      <form class="margin-top-lg" id="form">
+        <input type="text" name="task" id="task-input" placeholder="Set a task"/>
+        <label class="margin-top-md">Number of pomos</label>
+        <div class="number-input margin-top-md">
+          <input type="number" name="pomo-number" id="pomo-number" value="1"/>
+          <button class="button" id="up-btn">&#9650;</button>
+          <button class="button" id="down-btn">&#9660;</button>
+        </div>
+        <button type="submit" id="submit" class="margin-top-md button">&#43;</button>
+      </form>
+    </template>
   </main>
   <script type="module" src="./scripts/main.js"></script>
 </body>
