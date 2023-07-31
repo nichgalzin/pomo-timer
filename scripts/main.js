@@ -2,7 +2,7 @@ import { createTimer } from "./utils/create-timer.js";
 import { decrement, increment } from "./increment-decrement.js";
 import { setTask } from "./setTask.js";
 import { makeForm } from "./utils/make-form.js";
-import { breakBtnListener } from "./utils/break-btn-listener.js";
+import { breakBtn } from "./utils/break-btn.js";
 import { backBtnReset } from "./utils/back-btn.js";
 
 /*------------------------------------*\
@@ -31,7 +31,6 @@ const timer = createTimer(timerDuration, controlImg);
 
 main.addEventListener("click", (event) => {
   const target = event.target;
-  console.log(target);
 
   // Listener to deal with play button
   const className = target.getAttribute("class");
@@ -56,7 +55,9 @@ main.addEventListener("click", (event) => {
     setTask();
   }
   if (target.id === "back-btn") {
-    event.preventDefault();
     backBtnReset(main);
+  }
+  if (target.id === "break-btn") {
+    breakBtn();
   }
 });
