@@ -1,23 +1,38 @@
 import { createTimer } from "./utils/create-timer.js";
 import { decrement, increment } from "./increment-decrement.js";
 import { setTask } from "./setTask.js";
+import { makeForm } from "./utils/make-form.js";
+import { breakBtn } from "./utils/break-btn.js";
+import { backBtnReset } from "./utils/back-btn.js";
+
+/*------------------------------------*\
+  Function calls
+\*------------------------------------*/
+
+makeForm();
 
 /*------------------------------------*\
   Global variables
 \*------------------------------------*/
 
 let timerDuration = 0.5 * 60 * 1000;
+
+//DOM access
 const timerContainer = document.querySelector("#timer");
 const controlImg = document.querySelector("#control-img");
+const main = document.querySelector("#main");
 
+//Make a new timer object
 const timer = createTimer(timerDuration, controlImg);
 
 /*------------------------------------*\
   Event listeners
 \*------------------------------------*/
 
-timerContainer.addEventListener("click", (event) => {
+main.addEventListener("click", (event) => {
   const target = event.target;
+
+  // Listener to deal with play button
   const className = target.getAttribute("class");
   if (className === "play") {
     timer.start();
@@ -25,24 +40,24 @@ timerContainer.addEventListener("click", (event) => {
   if (className === "pause") {
     timer.stop();
   }
-});
 
-// when up button is clicked, it increments by one
-const upButton = document.getElementById('up-btn')
-upButton.addEventListener('click', (event) => {
+  // Listeners to reat with form buttons
+  if (target.id === "up-btn") {
     event.preventDefault();
     increment();
-});
-
-// when down button is clicked, it increments by one
-const downButton = document.getElementById('down-btn')
-downButton.addEventListener('click', (event) => {
+  }
+  if (target.id === "down-btn") {
     event.preventDefault();
     decrement();
-});
-
-const addButton = document.getElementById('submit')
-addButton.addEventListener('click', (event) => {
+  }
+  if (target.id === "submit") {
     event.preventDefault();
     setTask();
-})
+  }
+  if (target.id === "back-btn") {
+    backBtnReset(main);
+  }
+  if (target.id === "break-btn") {
+    breakBtn();
+  }
+});

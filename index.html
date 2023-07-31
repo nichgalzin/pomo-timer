@@ -1,17 +1,20 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300" rel="stylesheet">
-  <title>Pomo timer</title>
-</head>
-<body>
-  <h1>Pomo Timer</h1>
-  <main id="main" class="wrapper margin-top-lg">
-     <div id="timer">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300"
+      rel="stylesheet"
+    />
+    <title>Pomo timer</title>
+  </head>
+  <body>
+    <h1>Pomo Timer</h1>
+    <main id="main" class="wrapper margin-top-lg">
+      <div id="timer">
         <div id="time">25:00</div>
         <button class="button" id="timer-btn">
           <img
@@ -22,22 +25,36 @@
           />
         </button>
       </div>
-    <div class="timer-controls margin-top-lg">
-      <button class="controls-btn button">Pomo</button>
-      <button class="controls-btn button">Short</button>
-      <button class="controls-btn button">Long</button>
-    </div>
-    <form class="margin-top-lg" id="form">
-      <input type="text" name="task" id="task-input" placeholder="Set a task"/>
-      <label class="margin-top-md">Number of pomos</label>
-      <div class="number-input margin-top-md">
-        <input type="number" name="pomo-number" id="pomo-number" value="1"/>
-        <button class="button break-back" id="up-btn">&#9650;</button>
-        <button class="button break-back" id="down-btn">&#9660;</button>
+      <div class="timer-controls margin-top-lg">
+        <button class="controls-btn button" id="pomo-btn">Pomo</button>
+        <button class="controls-btn button" id="short-btn">Short</button>
+        <button class="controls-btn button" id="long-btn">Long</button>
       </div>
-      <button type="submit" id="submit" class="margin-top-md button">&#43;</button>
-    </form>
-  </main>
-  <script type="module" src="./scripts/main.js"></script>
-</body>
+      <template id="form-template">
+        <form class="margin-top-lg" id="form">
+          <input
+            type="text"
+            name="task"
+            id="task-input"
+            placeholder="Set a task"
+          />
+          <label class="margin-top-md">Number of pomos</label>
+          <div class="number-input margin-top-md">
+            <input
+              type="number"
+              name="pomo-number"
+              id="pomo-number"
+              value="1"
+            />
+            <button class="button" id="up-btn">&#9650;</button>
+            <button class="button" id="down-btn">&#9660;</button>
+          </div>
+          <button type="submit" id="submit" class="margin-top-md button">
+            &#43;
+          </button>
+        </form>
+      </template>
+    </main>
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
 </html>
