@@ -10,9 +10,9 @@ export const setTask = () => {
 
   // create text render
   const pomoResult = document.createElement("div");
-  pomoResult.id = 'task-display-container';
+  pomoResult.id = "task-display-container";
 
-  const taskResult = document.createElement("p");
+  const taskResult = document.createElement("h2");
   taskResult.classList.add("text-render");
 
   const taskResultText = document.createTextNode(taskInput);
@@ -27,12 +27,13 @@ export const setTask = () => {
   // create buttons
   const breakButton = document.createElement("button");
   breakButton.classList.add("button", "break-back");
+  breakButton.id = "break-btn";
   const breakButtonText = document.createTextNode("Break");
   breakButton.append(breakButtonText);
 
   const backButton = document.createElement("button");
   backButton.classList.add("button", "break-back");
-  backButton.id = 'back-btn'
+  backButton.id = "back-btn";
   const backButtonText = document.createTextNode("Back");
   backButton.append(backButtonText);
 
