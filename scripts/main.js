@@ -4,6 +4,7 @@ import { setTask } from "./setTask.js";
 import { makeForm } from "./utils/make-form.js";
 import { breakBtn } from "./utils/break-btn.js";
 import { backBtnReset } from "./utils/back-btn.js";
+import { isTimerRunning } from "./utils/create-timer.js";
 
 /*------------------------------------*\
   Function calls

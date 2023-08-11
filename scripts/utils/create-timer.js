@@ -1,7 +1,7 @@
+export let isTimerRunning = false;
 export const createTimer = (timerDuration, controlImg) => {
   let timerInterval;
   let endTime;
-  let isTimerRunning = false;
 
   const startTimer = () => {
     if (!isTimerRunning) {
