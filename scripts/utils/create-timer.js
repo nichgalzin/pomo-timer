@@ -1,4 +1,4 @@
-export let isTimerRunning = false;
+let isTimerRunning = false;
 export const createTimer = (timerDuration, controlImg) => {
   let timerInterval;
   let endTime;
@@ -29,7 +29,6 @@ export const createTimer = (timerDuration, controlImg) => {
     if (isTimerRunning) {
       clearInterval(timerInterval);
       isTimerRunning = false;
-      timerDuration = 0;
       controlImg.src = "./resources/play.svg";
       controlImg.className = "play";
       const formattedTime = formatTime(0);

@@ -4,7 +4,6 @@ import { setTask } from "./setTask.js";
 import { makeForm } from "./utils/make-form.js";
 import { breakBtn } from "./utils/break-btn.js";
 import { backBtnReset } from "./utils/back-btn.js";
-import { isTimerRunning } from "./utils/create-timer.js";
 
 /*------------------------------------*\
   Function calls
@@ -19,7 +18,6 @@ makeForm();
 let timerDuration = 0.5 * 60 * 1000;
 
 //DOM access
-const timerContainer = document.querySelector("#timer");
 const controlImg = document.querySelector("#control-img");
 const main = document.querySelector("#main");
 
