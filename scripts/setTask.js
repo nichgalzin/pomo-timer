@@ -22,16 +22,18 @@ export const setTask = () => {
 
   const numberOfPomos = document.createElement("p");
   numberOfPomos.classList.add("text-render");
+  numberOfPomos.id = "number-pomos";
 
-  const numberOfPomosText = document.createTextNode(`${global.currentPomo} of ${global.totalPomos} pomos`);
+  const numberOfPomosText = document.createTextNode(
+    `${global.currentPomo} of ${global.totalPomos} pomos`
+  );
   numberOfPomos.append(numberOfPomosText);
 
   // create buttons
-  const breakButton = document.createElement("button");
-  breakButton.classList.add("button", "break-back");
-  breakButton.id = "break-btn";
-  const breakButtonText = document.createTextNode("Break");
-  breakButton.append(breakButtonText);
+  const nextButton = document.createElement("button");
+  nextButton.classList.add("button", "break-back");
+  nextButton.id = "next-btn";
+  nextButton.textContent = 'Next';
 
   const backButton = document.createElement("button");
   backButton.classList.add("button", "break-back");
@@ -39,6 +41,6 @@ export const setTask = () => {
   const backButtonText = document.createTextNode("Back");
   backButton.append(backButtonText);
 
-  pomoResult.append(taskResult, numberOfPomos, breakButton, backButton);
+  pomoResult.append(taskResult, numberOfPomos, nextButton, backButton);
   main.append(pomoResult);
 };

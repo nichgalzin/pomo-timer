@@ -2,7 +2,6 @@ import { createTimer } from "./utils/create-timer.js";
 import { decrement, increment } from "./increment-decrement.js";
 import { setTask } from "./setTask.js";
 import { makeForm } from "./utils/make-form.js";
-import { breakBtn } from "./utils/break-btn.js";
 import { backBtnReset } from "./utils/back-btn.js";
 import { nextBtn } from "./utils/next-btn.js";
 import { global } from "./utils/global-variables.js";
@@ -59,9 +58,9 @@ main.addEventListener("click", (event) => {
   if (target.id === "back-btn") {
     backBtnReset(main);
   }
-  if (target.id === "break-btn") {
-    breakBtn();
-  }
+  // if (target.id === "break-btn") {
+  //   breakBtn();
+  // }
   if (target.id === "next-btn") {
     nextBtn();
   }
