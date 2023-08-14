@@ -22,20 +22,18 @@
  *
  */
 
-
-
 /*------------------------------------*\
   Settings
 \*------------------------------------*/
 :root {
-  --primary-light: #F8F1FF;
-  --primary-dark: #534D56;
-  --secondary-dark: #1B998B;
-  --secondary-light: #DECDF5;
+  --primary-light: #f8f1ff;
+  --primary-dark: #534d56;
+  --secondary-dark: #1b998b;
+  --secondary-light: #decdf5;
   --tertiary-dark: #656176;
-  --tertiary-light: #D9D9D9;
-  --header-font: 'Work Sans', sans-serif;
-  --paragraph-font: 'Open Sans', sans-serif;
+  --tertiary-light: #d9d9d9;
+  --header-font: "Work Sans", sans-serif;
+  --paragraph-font: "Open Sans", sans-serif;
 }
 
 body {
@@ -95,7 +93,6 @@ input {
   outline: none;
   background: var(--tertiary-light);
   border-radius: 6px;
-
 }
 
 input::-webkit-outer-spin-button,
@@ -105,7 +102,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -157,7 +154,7 @@ input[type=number] {
   height: 2.5rem;
   width: 80vw;
   max-width: 25rem;
-  padding-left: .75rem;
+  padding-left: 0.75rem;
 }
 
 label {
@@ -197,7 +194,7 @@ label {
   background-color: var(--secondary-light);
   width: 8rem;
   height: 3rem;
-  
+
   padding: 0.4rem 0rem;
   /* breaks increment buttons */
   margin: 0rem 0rem 3rem 1rem;
@@ -210,6 +207,7 @@ label {
   font-size: 1.5rem;
 }
 
-#up-btn, #down-btn {
+#up-btn,
+#down-btn {
   margin: 0.4rem 0.5rem 0rem 0rem;
 }

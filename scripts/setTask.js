@@ -1,8 +1,10 @@
+import { global } from "./utils/global-variables.js";
+
 export const setTask = () => {
   // select elements
   const main = document.getElementById("main");
   let taskInput = document.getElementById("task-input").value;
-  let pomoNumber = document.getElementById("pomo-number").value;
+  global.totalPomos = document.getElementById("pomo-number").value;
   const formContainer = document.getElementById("form");
 
   // hide set task and related buttons
@@ -21,7 +23,7 @@ export const setTask = () => {
   const numberOfPomos = document.createElement("p");
   numberOfPomos.classList.add("text-render");
 
-  const numberOfPomosText = document.createTextNode(`1 of ${pomoNumber} pomos`);
+  const numberOfPomosText = document.createTextNode(`${global.currentPomo} of ${global.totalPomos} pomos`);
   numberOfPomos.append(numberOfPomosText);
 
   // create buttons
