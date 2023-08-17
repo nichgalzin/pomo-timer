@@ -2,8 +2,9 @@ import { createTimer } from "./utils/create-timer.js";
 import { decrement, increment } from "./increment-decrement.js";
 import { setTask } from "./setTask.js";
 import { makeForm } from "./utils/make-form.js";
-import { breakBtn } from "./utils/break-btn.js";
 import { backBtnReset } from "./utils/back-btn.js";
+import { nextBtn } from "./utils/next-btn.js";
+import { global } from "./utils/global-variables.js";
 
 /*------------------------------------*\
   Function calls
@@ -15,7 +16,7 @@ makeForm();
   Global variables
 \*------------------------------------*/
 
-let timerDuration = 0.5 * 60 * 1000;
+let timerDuration = global.timerDuration;
 
 //DOM access
 const timerContainer = document.querySelector("#timer");
@@ -41,7 +42,7 @@ main.addEventListener("click", (event) => {
     timer.stop();
   }
 
-  // Listeners to reat with form buttons
+  // Listeners to react with form buttons
   if (target.id === "up-btn") {
     event.preventDefault();
     increment();
@@ -57,7 +58,11 @@ main.addEventListener("click", (event) => {
   if (target.id === "back-btn") {
     backBtnReset(main);
   }
-  if (target.id === "break-btn") {
-    breakBtn();
+  // if (target.id === "break-btn") {
+  //   breakBtn();
+  // }
+  if (target.id === "next-btn") {
+    nextBtn();
   }
+
 });

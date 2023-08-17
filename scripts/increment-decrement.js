@@ -1,4 +1,4 @@
-export const increment = (numberOfPomos) => {
+export const increment = () => {
     let pomoNumber = document.getElementById('pomo-number');
     if(pomoNumber && pomoNumber.value) {
     //     turn value from string to number
@@ -6,7 +6,7 @@ export const increment = (numberOfPomos) => {
     }
 }
 
-export const decrement = (numberOfPomos) => {
+export const decrement = () => {
     let pomoNumber = document.getElementById('pomo-number');
     if(pomoNumber && pomoNumber.value) {
         // sets 1 as lowest number

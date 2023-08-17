@@ -1,4 +1,4 @@
-import { makeForm } from "./make-form.js";
+import { global } from "./global-variables.js";
 
 export const backBtnReset = (main) => {
   // Clear task display
@@ -6,7 +6,10 @@ export const backBtnReset = (main) => {
   main.removeChild(taskContainer);
 
   // Add the form back to DOM set listeners
-  const formContainer = document.querySelector('#form');
+  const formContainer = document.querySelector("#form");
   formContainer.reset();
-  formContainer.style.display = 'flex';
+  formContainer.style.display = "flex";
+
+  // Reset global pomo count
+  global.currentPomo = 1;
 };

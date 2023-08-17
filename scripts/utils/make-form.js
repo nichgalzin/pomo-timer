@@ -6,5 +6,4 @@ export const makeForm = () => {
   // Select parent container and append
   const main = document.querySelector("main");
   main.append(newForm);
-
 };
