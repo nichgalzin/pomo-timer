@@ -1,11 +1,12 @@
-let isTimerRunning = false;
-export const createTimer = (timerDuration, controlImg) => {
+import { global } from "./global-variables.js";
+
+export const createTimer = (controlImg) => {
   let timerInterval;
   let endTime;
 
   const startTimer = () => {
     if (!isTimerRunning) {
-      endTime = Date.now() + timerDuration;
+      endTime = Date.now() + global.timerDuration;
       isTimerRunning = true;
       timerInterval = setInterval(updateTimerDisplay, 1000);
 
@@ -19,7 +20,17 @@ export const createTimer = (timerDuration, controlImg) => {
     if (isTimerRunning) {
       clearInterval(timerInterval);
       isTimerRunning = false;
-      timerDuration = remainingTime();
+      global.timerDuration = remainingTime();
+      controlImg.src = "./resources/play.svg";
+      controlImg.className = "play";
+    }
+  };
+
+  const clearTimer = () => {
+    if (isTimerRunning) {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      global.timerDuration = 0;
       controlImg.src = "./resources/play.svg";
       controlImg.className = "play";
     }
