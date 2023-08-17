@@ -85,6 +85,6 @@ main.addEventListener("click", (event) => {
 
   if (target.id === "long-btn") {
     timer.clear();
-    longTimer.start();
+    longBreakTimer();
   }
 });
