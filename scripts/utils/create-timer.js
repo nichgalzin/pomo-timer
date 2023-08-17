@@ -36,17 +36,6 @@ export const createTimer = (controlImg) => {
     }
   };
 
-  const clearTimer = () => {
-    if (isTimerRunning) {
-      clearInterval(timerInterval);
-      isTimerRunning = false;
-      controlImg.src = "./resources/play.svg";
-      controlImg.className = "play";
-      const formattedTime = formatTime(0);
-      document.getElementById("time").innerText = formattedTime;
-    }
-  };
-
   const remainingTime = () => {
     const currentTime = Date.now();
     return Math.max(endTime - currentTime, 0);
