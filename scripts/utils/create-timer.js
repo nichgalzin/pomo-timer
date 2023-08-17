@@ -27,6 +27,16 @@ export const createTimer = (controlImg) => {
     }
   };
 
+  const clearTimer = () => {
+    if (isTimerRunning) {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      global.timerDuration = 0;
+      controlImg.src = "./resources/play.svg";
+      controlImg.className = "play";
+    }
+  };
+
   const remainingTime = () => {
     const currentTime = Date.now();
     return Math.max(endTime - currentTime, 0);
@@ -57,5 +67,6 @@ export const createTimer = (controlImg) => {
   return {
     start: startTimer,
     stop: stopTimer,
+    clear: clearTimer,
   };
 };

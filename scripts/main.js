@@ -5,8 +5,11 @@ import { makeForm } from "./utils/make-form.js";
 import { backBtnReset } from "./utils/back-btn.js";
 import { nextBtn } from "./utils/next-btn.js";
 import { global } from "./utils/global-variables.js";
-import { setTaskTimer, shortBreakTimer, longBreakTimer } from "./utils/timer-duration-btns.js";
-
+import {
+  setTaskTimer,
+  shortBreakTimer,
+  longBreakTimer,
+} from "./utils/timer-duration-btns.js";
 
 /*------------------------------------*\
   Function calls
@@ -17,7 +20,6 @@ makeForm();
 /*------------------------------------*\
   Global variables
 \*------------------------------------*/
-
 
 //DOM access
 const controlImg = document.querySelector("#control-img");
@@ -43,13 +45,16 @@ main.addEventListener("click", (event) => {
   }
 
   // Listeners to set timer durations
-  if (target.id === 'pomo-btn') {
+  if (target.id === "pomo-btn") {
+    timer.clear();
     setTaskTimer();
   }
-  if (target.id === 'short-btn') {
+  if (target.id === "short-btn") {
+    timer.clear();
     shortBreakTimer();
   }
-  if (target.id === 'long-btn') {
+  if (target.id === "long-btn") {
+    timer.clear();
     longBreakTimer();
   }
 
@@ -74,6 +79,7 @@ main.addEventListener("click", (event) => {
   // }
   if (target.id === "next-btn") {
     nextBtn();
+    timer.clear();
+    setTaskTimer();
   }
-
 });
