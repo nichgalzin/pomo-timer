@@ -85,7 +85,6 @@ main.addEventListener("click", (event) => {
 
   if (target.id === "long-btn") {
     timer.clear();
-    const longTimer = createTimer(10 * 60 * 1000, controlImg);
     longTimer.start();
   }
 });

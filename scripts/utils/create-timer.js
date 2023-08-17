@@ -3,6 +3,7 @@ import { global } from "./global-variables.js";
 export const createTimer = (controlImg) => {
   let timerInterval;
   let endTime;
+  let isTimerRunning;
 
   const startTimer = () => {
     if (!isTimerRunning) {
